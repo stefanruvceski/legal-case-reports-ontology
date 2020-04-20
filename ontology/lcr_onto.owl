@@ -57,6 +57,7 @@
 <Judg:Jurisdiction rdf:about="#Federal_Court_of_Australia">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
+  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Jurisdiction>
 
 <Judg:Judgement rdf:about="#[2006]_FCA_35">
@@ -64,7 +65,9 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 November 2005</hearing_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-Nov-05</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 February 2006</judgement_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Feb-06</judgement_date>
 </Judg:Judgement>
 
 <proc:Physical_Object rdf:about="#New_South_Wales_District_Registry">
@@ -105,6 +108,7 @@
 <acti:Person rdf:about="#Clayton_Utz">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#[2006]_FCA_35"/>
+  <participant rdf:resource="#[2006]_FCA_7"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </acti:Person>
 
@@ -139,6 +143,76 @@
 </lega2:Legal_Person>
 
 <Judg:Legal_Rule rdf:about="#Migration_Act_1958">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Judg:Legal_Rule>
+
+<Judg:Judgement rdf:about="#[2006]_FCA_7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
+  <Judg:considers rdf:resource="#Workplace_Relations_Act_1996"/>
+  <Judg:considers rdf:resource="#Crimes_Act_1914"/>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9-Dec-05</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16-Jan-06</judgement_date>
+</Judg:Judgement>
+
+<proc:Physical_Object rdf:about="#Victoria_District_Registry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <stores rdf:resource="#[2006]_FCA_7"/>
+</proc:Physical_Object>
+
+<acti:Person rdf:about="#Marshall_J">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_7"/>
+  <role:plays rdf:resource="#judge"/>
+</acti:Person>
+
+<acti:Person rdf:about="#Dr_C_Jessup">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_7"/>
+  <role:plays rdf:resource="#applicant_counsel"/>
+</acti:Person>
+
+<lega:Legal_Role rdf:about="#applicant_counsel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<acti:Person rdf:about="#CEPU">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_7"/>
+  <role:plays rdf:resource="#applicant_solicitor"/>
+</acti:Person>
+
+<lega:Legal_Role rdf:about="#applicant_solicitor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<acti:Person rdf:about="#Mr_F_Parry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_7"/>
+  <role:plays rdf:resource="#respondent_counsel"/>
+</acti:Person>
+
+<lega2:Legal_Person rdf:about="#Communications,_Electrical,_Electronic,_Energy,_Information,_Postal,_Plumbing_and_Allied_Services_Union_Of_Australia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_7"/>
+  <role:plays rdf:resource="#applicant"/>
+</lega2:Legal_Person>
+
+<lega:Legal_Role rdf:about="#applicant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<lega2:Legal_Person rdf:about="#Aci_Operations_Pty_Ltd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_7"/>
+  <role:plays rdf:resource="#respondent"/>
+</lega2:Legal_Person>
+
+<Judg:Legal_Rule rdf:about="#Workplace_Relations_Act_1996">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Judg:Legal_Rule>
+
+<Judg:Legal_Rule rdf:about="#Crimes_Act_1914">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
