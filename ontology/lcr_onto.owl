@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto"
+         xmlns="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto#"
+         xmlns:Judg="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#"
+         xmlns:proc="http://www.estrellaproject.org/lkif-core/process.owl#"
+         xmlns:acti="http://www.estrellaproject.org/lkif-core/action.owl#"
+         xmlns:role="http://www.estrellaproject.org/lkif-core/role.owl#"
+         xmlns:lega="http://www.estrellaproject.org/lkif-core/legal-role.owl#"
+         xmlns:lega2="http://www.estrellaproject.org/lkif-core/legal-action.owl#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto">
+  <owl:imports rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Domain.owl"/>
+  <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#participant">
+  <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+  <rdfs:range rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Object"/>
+  <owl:inverseOf rdf:resource="#participates_in"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#participates_in">
+  <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-top.owl#Mental_Object"/>
+  <rdfs:range rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl#Agent"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#stored_in">
+  <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
+  <rdfs:range rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#Physical_Object"/>
+  <owl:inverseOf rdf:resource="#stores"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#stores">
+  <rdfs:domain rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl#Physical_Object"/>
+  <rdfs:range rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hearing_date">
+  <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#judgement_date">
+  <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#jurisdiction_city">
+  <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Jurisdiction"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<Judg:Jurisdiction rdf:about="#Federal_Court_of_Australia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
+</Judg:Jurisdiction>
+
+<Judg:Judgement rdf:about="#[2006]_FCA_35">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
+  <Judg:considers rdf:resource="#Migration_Act_1958"/>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 November 2005</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 February 2006</judgement_date>
+</Judg:Judgement>
+
+<proc:Physical_Object rdf:about="#New_South_Wales_District_Registry">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <stores rdf:resource="#[2006]_FCA_35"/>
+</proc:Physical_Object>
+
+<acti:Person rdf:about="#Moore_J">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_35"/>
+  <role:plays rdf:resource="#judge"/>
+</acti:Person>
+
+<lega:Legal_Role rdf:about="#judge">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<acti:Person rdf:about="#Michael_Jones">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_35"/>
+  <role:plays rdf:resource="#appellant_solicitor"/>
+</acti:Person>
+
+<lega:Legal_Role rdf:about="#appellant_solicitor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<acti:Person rdf:about="#S_LLoyd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_35"/>
+  <role:plays rdf:resource="#respondent_counsel"/>
+</acti:Person>
+
+<lega:Legal_Role rdf:about="#respondent_counsel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<acti:Person rdf:about="#Clayton_Utz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_35"/>
+  <role:plays rdf:resource="#respondent_solicitor"/>
+</acti:Person>
+
+<lega:Legal_Role rdf:about="#respondent_solicitor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<lega2:Legal_Person rdf:about="#SZGBY">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_35"/>
+  <role:plays rdf:resource="#appellant"/>
+</lega2:Legal_Person>
+
+<lega:Legal_Role rdf:about="#appellant">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<lega2:Legal_Person rdf:about="#Minister_for_Immigration_and_Multicultural_and_Indigenous_Affairs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_35"/>
+  <role:plays rdf:resource="#respondent"/>
+</lega2:Legal_Person>
+
+<lega:Legal_Role rdf:about="#respondent">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</lega:Legal_Role>
+
+<lega2:Legal_Person rdf:about="#Refugee_Review_Tribunal">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#[2006]_FCA_35"/>
+  <role:plays rdf:resource="#respondent"/>
+</lega2:Legal_Person>
+
+<Judg:Legal_Rule rdf:about="#Migration_Act_1958">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Judg:Legal_Rule>
+
+
+</rdf:RDF>
