@@ -1,0 +1,49 @@
+prefiksi:
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX role: <http://www.estrellaproject.org/lkif-core/role.owl#>
+    PREFIX legal_action: <http://www.estrellaproject.org/lkif-core/legal-action.owl#>
+    PREFIX legal_role: <http://www.estrellaproject.org/lkif-core/legal-role.owl#>
+    PREFIX lcr: <http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto.owl#>
+
+-----------------------------------------------------------------
+
+1. svi subjekti koji igraju ulogu judge
+
+    SELECT ?subject 
+	WHERE
+	{
+		?subject role:plays  lcr:judge.
+	}
+-----------------------------------------------------------------
+
+2. svi subjekti koji igraju ulogu appellant_counsel
+
+    SELECT ?subject 
+	WHERE
+	{
+		?subject role:plays  lcr:appellant_counsel
+	}
+-----------------------------------------------------------------
+
+3. svi individuali klase legal_role
+
+    SELECT DISTINCT  ?individual
+	WHERE
+	{
+		?individual rdf:type legal_rol:Legal_Role
+	}
+-----------------------------------------------------------------
+
+4. svi individuali koji su spomenuli judgement 2006_FCA_88
+
+    SELECT ?subject 
+	WHERE
+	{
+		?subject lcr:participant lcr:2006_FCA_88
+	}
+-----------------------------------------------------------------
+
+5.
