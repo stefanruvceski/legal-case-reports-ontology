@@ -26,15 +26,47 @@ class LCRDataWrapper:
         self.jurisdiction_court = data_row['jurisdiction_court']
         self.jurisdiction_court_city = data_row['jurisdiction_court_city']
         self.judge = data_row['judge']
-        self.side1_counsel = data_row['side1_counsel']
-        self.side1_solicitor = data_row['side1_solicitor']
-        self.respondent_counsel = data_row['respondent_counsel']
-        self.respondent_solicitor = data_row['respondent_solicitor']
+        
+        if(data_row['side1_counsel'] != ''):
+            self.side1_counsels = data_row['side1_counsel'].split(';')
+        else:
+            self.side1_counsels = []
+            
+        if(data_row['side1_solicitor'] != ''):
+            self.side1_solicitors = data_row['side1_solicitor'].split(';')
+        else:
+            self.side1_solicitors = []
+        
+        if(data_row['side2_counsel'] != ''):
+            self.side2_counsels = data_row['side2_counsel'].split(';')
+        else:
+            self.side2_counsels = []
+            
+        if(data_row['side2_solicitor']):
+            self.side2_solicitors = data_row['side2_solicitor'].split(';')
+        else:
+            self.side2_solicitors = []
+            
         self.side1_role = data_row['side1_role']     # ne znam kakvih jos ima uloga, video sam i applicant
-        self.side1 = data_row['side1']
+        
+        # moze da bude vise ucesnika na prvoj strani, ali svi su u istoj ulozi
+        if(data_row['side1'] != ''):
+            self.side1 = data_row['side1'].split(';')
+        else:
+            self.side1 = []
+        
+        self.side2_role = data_row['side2_role']        # ima vise uloga, nije jedina respondent
+        
         # moze da bude vise ucesnika na drugoj strani, proveriti da li isto vazi i za prvu
-        self.side2 = data_row['side2'].split(';')
-        self.legal_rules = data_row['legal_rules'].split(';')
+        if(data_row['side2'] != ''):
+            self.side2 = data_row['side2'].split(';')
+        else:
+            self.side2 = []
+            
+        if(data_row['legal_rules'] != ''):
+            self.legal_rules = data_row['legal_rules'].split(';')
+        else:
+            self.legal_rules = []
 
 # Funkcija ucitava csv fajl i kreira listu wrapper objekata od kojih ce se populisati ontologija
 def load_data(path='lcr_data.csv'):
@@ -70,104 +102,85 @@ def populate_ontology(legal_ontology, data_instances):
     
     for instance in data_instances:
         # Jurisdiction individual
-        print(1)
         court = instance.jurisdiction_court.replace(' ', '_')
-        print(court)
         jurisdiction = judo.Jurisdiction(court, namespace=legal_ontology)
-        jurisdiction.jurisdiction_city.append(instance.jurisdiction_court_city)
         
         # Judgement individual
-        print(2)
         judgement = instance.case_id.replace(' ', '_')
-        print(judgement)
         judgement = judo.Judgement(judgement, namespace=legal_ontology)
+        judgement.jurisdiction_city.append(instance.jurisdiction_court_city)
         judgement.judgement_date.append(instance.judgement_date)
         judgement.hearing_date.append(instance.hearing_date)
         # spajanje suda i presude preko considered_by ObjectProperty-a
         judgement.considered_by.append(jurisdiction)
         
         # Registry individual
-        print(3)
         registry_name = instance.judgement_registry.replace(' ', '_')
-        print(registry_name)
         registry = lkif_process.Physical_Object(registry_name, namespace=legal_ontology)
         registry.stores.append(judgement)         # dodavanje dokumenta u odgovarajuci registry
         
-        # Judge individual (Person that %plays% "judge" Legal_Role)
+        # svi ucesnici presude modelovani su kao Legal_Person, jer ne moraju biti iskljucivo jedna osoba, vec mogu biti i kompanije, organizacije, itd.
+        
+        # Judge individual (Legal_Person that %plays% "judge" Legal_Role)
         # takodje je ucesnik odgovarajuce presude, tj. .participant(...presuda...)
-        print(4)
         judge_name = instance.judge.replace(' ', '_')
-        print(judge_name)
-        judge = lkif_action.Person(judge_name, namespace=legal_ontology)
+        judge = lkif_legal_action.Legal_Person(judge_name, namespace=legal_ontology)
         judge_role = lkif_legal_role.Legal_Role('judge', namespace=legal_ontology)
         judge.plays.append(judge_role)
         judge.participant.append(judgement)
         
-        # Side1 (Appellant/Applicant) Counsel individual
-        print(5)
-        if(instance.side1_counsel != ''):
-            a_counsel_name = instance.side1_counsel.replace(' ', '_')
-            print(a_counsel_name)
-            side1_counsel = lkif_action.Person(a_counsel_name, namespace=legal_ontology)
+        # Side 1 (Appellant/Applicant) Counsel individual
+        for counsel in instance.side1_counsels:
+            a_counsel_name = counsel.replace(' ', '_')
+            side1_counsel = lkif_legal_action.Legal_Person(a_counsel_name, namespace=legal_ontology)
             side1_counsel_role = lkif_legal_role.Legal_Role(instance.side1_role + '_counsel', namespace=legal_ontology)
             side1_counsel.plays.append(side1_counsel_role)
             side1_counsel.participant.append(judgement)
         
-        # Appellant Solicitor individual
-        print(6)
-        if(instance.side1_solicitor != ''):
-            a_solicitor_name = instance.side1_solicitor.replace(' ', '_')
-            print(a_solicitor_name)
-            side1_solicitor = lkif_action.Person(a_solicitor_name, namespace=legal_ontology)
+        # Side 1 Solicitor individual
+        for solicitor in instance.side1_solicitors:
+            a_solicitor_name = solicitor.replace(' ', '_')
+            side1_solicitor = lkif_legal_action.Legal_Person(a_solicitor_name, namespace=legal_ontology)
             side1_solicitor_role = lkif_legal_role.Legal_Role(instance.side1_role + '_solicitor', namespace=legal_ontology)
             side1_solicitor.plays.append(side1_solicitor_role)
             side1_solicitor.participant.append(judgement)
             
-        # Respondent Counsel individual
-        print(7)
-        if(instance.respondent_counsel != ''):
-            r_counsel_name = instance.respondent_counsel.replace(' ', '_')
-            print(r_counsel_name)
-            respondent_counsel = lkif_action.Person(r_counsel_name, namespace=legal_ontology)
-            respondent_counsel_role = lkif_legal_role.Legal_Role('respondent_counsel', namespace=legal_ontology)
-            respondent_counsel.plays.append(respondent_counsel_role)
-            respondent_counsel.participant.append(judgement)
+        # Side 2 Counsel individual
+        for counsel in instance.side2_counsels:
+            r_counsel_name = counsel.replace(' ', '_')
+            side2_counsel = lkif_legal_action.Legal_Person(r_counsel_name, namespace=legal_ontology)
+            side2_counsel_role = lkif_legal_role.Legal_Role(instance.side2_role + '_counsel', namespace=legal_ontology)
+            side2_counsel.plays.append(side2_counsel_role)
+            side2_counsel.participant.append(judgement)
             
-        # Respondent Solicitor individual
-        print(8)
-        if(instance.respondent_solicitor != ''):
-            r_solicitor_name = instance.respondent_solicitor.replace(' ', '_')
-            print(r_solicitor_name)
-            respondent_solicitor = lkif_action.Person(r_solicitor_name, namespace=legal_ontology)
-            respondent_solicitor_role = lkif_legal_role.Legal_Role('respondent_solicitor', namespace=legal_ontology)
-            respondent_solicitor.plays.append(respondent_solicitor_role)
-            respondent_solicitor.participant.append(judgement)
+        # Side 2 Solicitor individual
+        for solicitor in instance.side2_solicitors:
+            r_solicitor_name = solicitor.replace(' ', '_')
+            side2_solicitor = lkif_legal_action.Legal_Person(r_solicitor_name, namespace=legal_ontology)
+            side2_solicitor_role = lkif_legal_role.Legal_Role(instance.side2_role + '_solicitor', namespace=legal_ontology)
+            side2_solicitor.plays.append(side2_solicitor_role)
+            side2_solicitor.participant.append(judgement)
             
         # Side 1 individual (left of V in judgement full name)
-        print(9)
-        side1_name = instance.side1.replace(' ', '_')
-        print(side1_name)
-        side1 = lkif_legal_action.Legal_Person(side1_name, namespace=legal_ontology)
-        side1_role = lkif_legal_role.Legal_Role(instance.side1_role, namespace=legal_ontology)
-        side1.plays.append(side1_role)
-        side1.participant.append(judgement)
+        for side1_name in instance.side1:
+            side1_name = side1_name.replace(' ', '_')
+            side1 = lkif_legal_action.Legal_Person(side1_name, namespace=legal_ontology)
+            side1_role = lkif_legal_role.Legal_Role(instance.side1_role, namespace=legal_ontology)
+            side1.plays.append(side1_role)
+            side1.participant.append(judgement)
         
         # Side 2 individuals (right of V in judgement full name)
         # There could be more than 1 respondents!
-        print(10)
         for side2_name in instance.side2:
             side2_name = side2_name.replace(' ', '_')
-            print(side2_name)
             side2 = lkif_legal_action.Legal_Person(side2_name, namespace=legal_ontology)
-            side2_role = lkif_legal_role.Legal_Role('respondent', namespace=legal_ontology)    # proveriti da li postoji vise razlicitih uloga!
+            side2_role = lkif_legal_role.Legal_Role(instance.side2_role, namespace=legal_ontology)    # proveriti da li postoji vise razlicitih uloga!
             side2.plays.append(side2_role)
             side2.participant.append(judgement)
         
         # Legal rule individuals
-        print(11)
         for rule in instance.legal_rules:
             rule = rule.replace(' ', '_')
-            print(rule)
             legal_rule = judo.Legal_Rule(rule, namespace=legal_ontology)
             judgement.considers.append(legal_rule)
            
@@ -186,7 +199,7 @@ def save_ontology(legal_ontology):
 # sad u ovaj csv redom dodavati podatke za svaki dokument (rucno ili automatski, zavisi koliko toga mozemo kroz kod)
 # ako bude rucno, otvoris u excelu i redom, brzo ce to ici, nema ispod trocifrenog broja dokumenata
 # FUNKCIJA VISE NE SLUZI NICEMU I NE TREBA JE KORISTITI
-def initiate_data():
+"""def initiate_data():
     case_id = '[2006] FCA 35'
     judgement_date = '6 February 2006'
     hearing_date = '21 November 2005'
@@ -212,7 +225,7 @@ def initiate_data():
       
     df = pd.DataFrame(data, columns=['case_id', 'judgement_date', 'hearing_date', 'judgement_registry', 'jurisdiction_court', 'jurisdiction_court_city', 'judge', 'side1_counsel', 'side1_solicitor', 'respondent_counsel', 'respondent_solicitor', 'side1_role', 'side1', 'side2', 'legal_rules'])
     
-    df.to_csv('lcr_data.csv', index=False)
+    df.to_csv('lcr_data.csv', index=False)"""
 
 
 #initiate_data()

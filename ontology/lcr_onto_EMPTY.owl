@@ -8,8 +8,10 @@
      xmlns:Judg="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#"
      xmlns:acti="http://www.estrellaproject.org/lkif-core/action.owl#"
      xmlns:lega="http://www.estrellaproject.org/lkif-core/legal-role.owl#"
+     xmlns:proc="http://www.estrellaproject.org/lkif-core/process.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:role="http://www.estrellaproject.org/lkif-core/role.owl#">
+     xmlns:role="http://www.estrellaproject.org/lkif-core/role.owl#"
+     xmlns:lega2="http://www.estrellaproject.org/lkif-core/legal-action.owl#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto">
         <owl:imports rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Domain.owl"/>
         <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl"/>
@@ -98,7 +100,7 @@
     <!-- http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto#jurisdiction_city -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto#jurisdiction_city">
-        <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Jurisdiction"/>
+        <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 </rdf:RDF>
