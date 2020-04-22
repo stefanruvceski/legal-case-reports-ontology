@@ -3,15 +3,15 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xml:base="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto"
-         xmlns="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto#"
+         xml:base="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto_protege"
+         xmlns="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto_protege#"
          xmlns:Judg="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#"
          xmlns:proc="http://www.estrellaproject.org/lkif-core/process.owl#"
          xmlns:lega="http://www.estrellaproject.org/lkif-core/legal-action.owl#"
          xmlns:role="http://www.estrellaproject.org/lkif-core/role.owl#"
          xmlns:lega2="http://www.estrellaproject.org/lkif-core/legal-role.owl#">
 
-<owl:Ontology rdf:about="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto">
+<owl:Ontology rdf:about="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto_protege">
   <owl:imports rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Domain.owl"/>
   <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl"/>
 </owl:Ontology>
@@ -48,6 +48,11 @@
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
+<owl:DatatypeProperty rdf:about="#judgement_name">
+  <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
 <owl:DatatypeProperty rdf:about="#jurisdiction_city">
   <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -61,13 +66,25 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
+  <Judg:considers rdf:resource="#2003_FCAFC_194"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-Nov-05</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZGBY v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
+</Judg:Judgement>
+
+<Judg:Legal_Rule rdf:about="#Migration_Act_1958">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Judg:Legal_Rule>
+
+<Judg:Judgement rdf:about="#2003_FCAFC_194">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAGH v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
 </Judg:Judgement>
 
 <proc:Physical_Object rdf:about="#New_South_Wales_District_Registry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <stores rdf:resource="#2006_FCA_35"/>
   <stores rdf:resource="#2006_FCA_35"/>
   <stores rdf:resource="#2006_FCA_47"/>
   <stores rdf:resource="#2006_FCA_88"/>
@@ -83,14 +100,11 @@
   <stores rdf:resource="#2006_FCA_912"/>
   <stores rdf:resource="#2006_FCA_701"/>
   <stores rdf:resource="#2006_FCA_240"/>
-  <stores rdf:resource="#2006_FCA_1616"/>
-  <stores rdf:resource="#2006_FCA_1451"/>
-  <stores rdf:resource="#2006_FCA_301"/>
-  <stores rdf:resource="#2006_FCA_1449"/>
 </proc:Physical_Object>
 
 <lega:Legal_Person rdf:about="#Moore_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_47"/>
   <participant rdf:resource="#2006_FCA_88"/>
@@ -99,7 +113,6 @@
   <participant rdf:resource="#2006_FCA_97"/>
   <participant rdf:resource="#2006_FCA_87"/>
   <participant rdf:resource="#2006_FCA_54"/>
-  <participant rdf:resource="#2006_FCA_1616"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
@@ -109,6 +122,7 @@
 
 <lega:Legal_Person rdf:about="#Michael_Jones">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#appellant_solicitor"/>
 </lega:Legal_Person>
@@ -120,6 +134,7 @@
 <lega:Legal_Person rdf:about="#S_LLoyd">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
@@ -130,12 +145,12 @@
 <lega:Legal_Person rdf:about="#Clayton_Utz">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_7"/>
   <participant rdf:resource="#2006_FCA_88"/>
   <participant rdf:resource="#2006_FCA_86"/>
   <participant rdf:resource="#2006_FCA_46"/>
   <participant rdf:resource="#2006_FCA_87"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
@@ -146,6 +161,7 @@
 <lega:Legal_Person rdf:about="#SZGBY">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
@@ -155,6 +171,7 @@
 
 <lega:Legal_Person rdf:about="#MINISTER_FOR_IMMIGRATION_AND_MULTICULTURAL_AND_INDIGENOUS_AFFAIRS">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_23"/>
   <participant rdf:resource="#2006_FCA_39"/>
@@ -169,8 +186,6 @@
   <participant rdf:resource="#2006_FCA_1495"/>
   <participant rdf:resource="#2006_FCA_701"/>
   <participant rdf:resource="#2006_FCA_240"/>
-  <participant rdf:resource="#2006_FCA_1616"/>
-  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
@@ -180,6 +195,7 @@
 
 <lega:Legal_Person rdf:about="#REFUGEE_REVIEW_TRIBUNAL">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_23"/>
   <participant rdf:resource="#2006_FCA_39"/>
@@ -193,22 +209,35 @@
   <participant rdf:resource="#2006_FCA_54"/>
   <participant rdf:resource="#2006_FCA_1495"/>
   <participant rdf:resource="#2006_FCA_701"/>
-  <participant rdf:resource="#2006_FCA_1616"/>
-  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Legal_Rule rdf:about="#Migration_Act_1958">
+<Judg:Judgement rdf:about="#2006_FCA_35">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Judg:Legal_Rule>
+  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
+  <Judg:considers rdf:resource="#Migration_Act_1958"/>
+  <Judg:considers rdf:resource="#2003_FCAFC_194"/>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-Nov-05</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZGBY v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2003_FCAFC_194">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAGH v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
 
 <Judg:Judgement rdf:about="#2006_FCA_7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Workplace_Relations_Act_1996"/>
   <Judg:considers rdf:resource="#Crimes_Act_1914"/>
+  <Judg:considers rdf:resource="#2005_FCA_1847"/>
+  <Judg:considers rdf:resource="#1999_FCA_1714"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9-Dec-05</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16-Jan-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Communications, Electrical, Electronic, Energy, Information, Postal, Plumbing and Allied Services Union of Australia v ACI Operations Pty Ltd</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
 
@@ -225,7 +254,6 @@
 <lega:Legal_Person rdf:about="#Marshall_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_7"/>
-  <participant rdf:resource="#2006_FCA_132"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
@@ -291,12 +319,26 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
+<Judg:Judgement rdf:about="#2005_FCA_1847">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finance Section Union v Commonwealth Bank of Australia</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#1999_FCA_1714">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Construction, Forestry, Mining and Energy Union v Coal and Allied Operations Pty Ltd</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_16">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
+  <Judg:considers rdf:resource="#2002_FCAFC_181"/>
+  <Judg:considers rdf:resource="#2004_FCA_1332"/>
+  <Judg:considers rdf:resource="#2003_FCAFC_131"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18-Jan-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18-Jan-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beyazkilinc v Manager Baxter Immigration Reception and Processing Centre</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adelaide</jurisdiction_city>
 </Judg:Judgement>
 
@@ -344,7 +386,6 @@
   <participant rdf:resource="#2006_FCA_47"/>
   <participant rdf:resource="#2006_FCA_97"/>
   <participant rdf:resource="#2006_FCA_240"/>
-  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
@@ -354,7 +395,7 @@
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<lega:Legal_Person rdf:about="#MANAGER_BAXTER_IMMIGRATION_RECEPTION_&amp;_PROCESSING_CENTRE">
+<lega:Legal_Person rdf:about="#MANAGER_BAXTER_IMMIGRATION_RECEPTION_and_PROCESSING_CENTRE">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_16"/>
   <role:plays rdf:resource="#respondent"/>
@@ -367,12 +408,35 @@
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
+<Judg:Judgement rdf:about="#2002_FCAFC_181">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li v Minister for Immigration and Multicultural Affairs</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2004_FCA_1332">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAJZ v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2003_FCAFC_131">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M38/2002 v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_23">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
+  <Judg:considers rdf:resource="#2005_FCA_869"/>
+  <Judg:considers rdf:resource="#2005_FCA_1801"/>
+  <Judg:considers rdf:resource="#2004_FCAFC_17"/>
+  <Judg:considers rdf:resource="#2005_FCAFC_73"/>
+  <Judg:considers rdf:resource="#2005_HCA_29"/>
+  <Judg:considers rdf:resource="#2004_FCAFC_287"/>
+  <Judg:considers rdf:resource="#2004_FCAFC_208"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30-Jan-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31-Jan-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MZWQW v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
 
@@ -398,12 +462,49 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
+<Judg:Judgement rdf:about="#2005_FCA_869">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZBFL v Refugee Review Tribunal</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2005_FCA_1801">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Applicant MZQAF v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2004_FCAFC_17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NALM v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2005_FCAFC_73">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minister for Immigration and Multicultural and Indigenous Affairs v VSAF of 2003</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2005_HCA_29">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Applicant NABD of 2002 v Minister for Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2004_FCAFC_287">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAVX v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2004_FCAFC_208">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAST v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_37">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Bankruptcy_Act_1966"/>
+  <Judg:considers rdf:resource="#1990_HCA_30"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vasiliou v Marchesi</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
 
@@ -438,12 +539,19 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
+<Judg:Judgement rdf:about="#1990_HCA_30">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gallo v Dawson</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_38">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
+  <Judg:considers rdf:resource="#2005_FCA_1401"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christodoulou v Disney Enterprises Inc</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
 
@@ -489,13 +597,21 @@
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
+<Judg:Judgement rdf:about="#2005_FCA_1401">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christodoulou v Disney Enterprises Inc</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_39">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Convention_Relating_to_the_Status_of_Refugees_1951"/>
   <Judg:considers rdf:resource="#Protocol_Relating_to_the_Status_of_Refugees_1967"/>
+  <Judg:considers rdf:resource="#2001_FCA_1833"/>
+  <Judg:considers rdf:resource="#2003_HCA_26"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VWBU v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
 
@@ -536,12 +652,24 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
+<Judg:Judgement rdf:about="#2001_FCA_1833">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branir Pty Ltd v Owston Nominees Pty Ltd</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2003_HCA_26">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dranichnikov v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_40">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
+  <Judg:considers rdf:resource="#1981_HCA_45"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Applicants A277/2002 v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
 
@@ -551,38 +679,42 @@
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2007]_FCA_1800">
+<Judg:Judgement rdf:about="#1981_HCA_45">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Port of Melbourne Authority v Anshun Pty Ltd</judgement_name>
+</Judg:Judgement>
+
+<Judg:Judgement rdf:about="#2007_FCA_1800">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
+  <Judg:considers rdf:resource="#2007_FCA_1799"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-Nov-07</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-Nov-07</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Di Stefano v Uniline Australia Ltd</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brisbane</jurisdiction_city>
 </Judg:Judgement>
 
 <proc:Physical_Object rdf:about="#Queensland_District_Registry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <stores rdf:resource="#[2007]_FCA_1800"/>
-  <stores rdf:resource="#2006_FCA_637"/>
-  <stores rdf:resource="#2006_FCA_110"/>
+  <stores rdf:resource="#2007_FCA_1800"/>
 </proc:Physical_Object>
 
 <lega:Legal_Person rdf:about="#Greenwood_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2007]_FCA_1800"/>
-  <participant rdf:resource="#2006_FCA_637"/>
+  <participant rdf:resource="#2007_FCA_1800"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_S_Cooper">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2007]_FCA_1800"/>
+  <participant rdf:resource="#2007_FCA_1800"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Phillips_Fox">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2007]_FCA_1800"/>
+  <participant rdf:resource="#2007_FCA_1800"/>
   <participant rdf:resource="#2006_FCA_54"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
@@ -590,30 +722,34 @@
 
 <lega:Legal_Person rdf:about="#Mr_B_J_Hess_SC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2007]_FCA_1800"/>
+  <participant rdf:resource="#2007_FCA_1800"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mallesons_Stephen_Jaques">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2007]_FCA_1800"/>
+  <participant rdf:resource="#2007_FCA_1800"/>
   <participant rdf:resource="#2006_FCA_1842"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#CARMELO_JOSEPH_LICCIARDI_DI_STEFANO">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2007]_FCA_1800"/>
+  <participant rdf:resource="#2007_FCA_1800"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#UNILINE_AUSTRALIA_LTD">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2007]_FCA_1800"/>
+  <participant rdf:resource="#2007_FCA_1800"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
+
+<Judg:Judgement rdf:about="#2007_FCA_1799">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uniline Australia Ltd v SBriggs Pty Ltd</judgement_name>
+</Judg:Judgement>
 
 <Judg:Judgement rdf:about="#2006_FCA_47">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -621,6 +757,7 @@
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khan v Migration Agent Registration Authority</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -642,6 +779,7 @@
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CZAJ v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canberra</jurisdiction_city>
 </Judg:Judgement>
 
@@ -665,6 +803,7 @@
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CZAH v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canberra</jurisdiction_city>
 </Judg:Judgement>
 
@@ -680,6 +819,7 @@
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZDZQ v Minister for Immigration and Multicultural Affairs and Anor</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -695,6 +835,7 @@
   <Judg:considers rdf:resource="#Copyright_Act_1968"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-Dec-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-Dec-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Corporation v RP Distribution Pty Ltd</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -750,6 +891,7 @@
   <Judg:considers rdf:resource="#Federal_Court_of_Australia_Act_1976"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8-Nov-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8-Nov-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZIAM v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -779,8 +921,10 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
+  <Judg:considers rdf:resource="#2005_FCA_1573"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S255 of 2003 v Refugee Review Tribunal</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -790,12 +934,18 @@
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
+<Judg:Judgement rdf:about="#2005_FCA_1573">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S255/2003 v Refugee Review Tribunal and Ors</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_87">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CZAI v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canberra</jurisdiction_city>
 </Judg:Judgement>
 
@@ -811,6 +961,7 @@
   <Judg:considers rdf:resource="#Corporations_Act_2001"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Oct-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Oct-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australian Securities and Investments Commission v Sleiman</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -820,9 +971,6 @@
   <participant rdf:resource="#2006_FCA_1495"/>
   <participant rdf:resource="#2006_FCA_912"/>
   <participant rdf:resource="#2006_FCA_701"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <participant rdf:resource="#2006_FCA_301"/>
-  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
@@ -849,9 +997,7 @@
 <lega:Legal_Person rdf:about="#AUSTRALIAN_SECURITIES_AND_INVESTMENTS_COMMISION">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_1354"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#plaintiff"/>
-  <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
 <lega2:Legal_Role rdf:about="#plaintiff">
@@ -878,6 +1024,7 @@
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7-Feb-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7-Feb-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZGWS v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -897,8 +1044,10 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
+  <Judg:considers rdf:resource="#2006_FMCA_1169"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Nov-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Nov-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Applicant S117 of 2003 v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -914,12 +1063,19 @@
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
+<Judg:Judgement rdf:about="#2006_FMCA_1169">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Applicant S117/2005 v Minister for Immigration and Multicultural Affairs and Anor</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_912">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Corporations_Act_2001"/>
+  <Judg:considers rdf:resource="#2006_FCA_670"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7-Jul-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7-Jul-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFE Corporation Limited, in the matter of SFE Corporation Limited</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -938,9 +1094,7 @@
 <lega:Legal_Person rdf:about="#Blake_Dawson_Waldron">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_912"/>
-  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#plaintiff_solicitor"/>
-  <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#SFE_CORPORATION_LIMITED">
@@ -949,12 +1103,19 @@
   <role:plays rdf:resource="#plaintiff"/>
 </lega:Legal_Person>
 
+<Judg:Judgement rdf:about="#2006_FCA_670">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFE Corporation Limited, in the matter of SFE Corporation Limited</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_701">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
+  <Judg:considers rdf:resource="#2006_FMCA_22"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-May-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-May-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZHAL v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -970,12 +1131,18 @@
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
+<Judg:Judgement rdf:about="#2006_FMCA_22">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZHAL v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
+</Judg:Judgement>
+
 <Judg:Judgement rdf:about="#2006_FCA_240">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9-Mar-06</hearing_date>
   <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16-Mar-06</judgement_date>
+  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZAYH v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
@@ -989,318 +1156,6 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_240"/>
   <role:plays rdf:resource="#applicant"/>
-</lega:Legal_Person>
-
-<Judg:Judgement rdf:about="#2006_FCA_1616">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
-  <Judg:considers rdf:resource="#Federal_Court_of_Australia_Act_1976"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-Nov-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23-Nov-06</judgement_date>
-  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
-</Judg:Judgement>
-
-<lega:Legal_Person rdf:about="#Sparke_Helmore">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1616"/>
-  <role:plays rdf:resource="#respondent_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#NBBL">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1616"/>
-  <role:plays rdf:resource="#applicant"/>
-</lega:Legal_Person>
-
-<Judg:Judgement rdf:about="#2006_FCA_1451">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
-  <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-Nov-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-Nov-06</judgement_date>
-  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
-</Judg:Judgement>
-
-<lega:Legal_Person rdf:about="#Mr_N_Perram_SC">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#applicant_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_B_Dharmananda">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#applicant_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Dr_AG_Bell_SC">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#respondent_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_JS_Emmett">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#respondent_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_SA_Goodman">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#respondent_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#legal_person1">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#respondent_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Ms_K_Turner">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#respondent_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Ms_J_Row">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#respondent_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#MICHAEL_JOSEPH_PATRICK_RYAN">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#applicant"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#ANTONY_WOODINGS">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#applicant"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#MATTHEW_GILL">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#respondent"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#MACQUARIE_BANK_LIMITED">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1451"/>
-  <role:plays rdf:resource="#respondent"/>
-</lega:Legal_Person>
-
-<Judg:Judgement rdf:about="#2006_FCA_637">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
-  <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-May-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-May-06</judgement_date>
-  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brisbane</jurisdiction_city>
-</Judg:Judgement>
-
-<lega:Legal_Person rdf:about="#Ms_Ece_Mustafa-Ay">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_637"/>
-  <role:plays rdf:resource="#applicant_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_Peter_Watts">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_637"/>
-  <role:plays rdf:resource="#respondent_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#LIFETIME_INVESTMENTS_PTY_LTD">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_637"/>
-  <role:plays rdf:resource="#applicant"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#COMMERCIAL_FINANCIAL_SERVICES_PTY_LTD">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_637"/>
-  <role:plays rdf:resource="#respondent"/>
-</lega:Legal_Person>
-
-<Judg:Judgement rdf:about="#2006_FCA_110">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
-  <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-Oct-05</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17-Feb-06</judgement_date>
-  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brisbane</jurisdiction_city>
-</Judg:Judgement>
-
-<lega:Legal_Person rdf:about="#Kiefel_J">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_110"/>
-  <role:plays rdf:resource="#judge"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_D_G_Russell_QC">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_110"/>
-  <role:plays rdf:resource="#applicant_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_H_Alexander">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_110"/>
-  <role:plays rdf:resource="#applicant_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Tobin_King_Lateef">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_110"/>
-  <role:plays rdf:resource="#applicant_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_P_E_Hack_SC">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_110"/>
-  <role:plays rdf:resource="#respondent_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_P_A_Looney">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_110"/>
-  <role:plays rdf:resource="#respondent_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#BRIAN_JOSEPH_HERAN">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_110"/>
-  <role:plays rdf:resource="#applicant"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#COMMISSIONER_OF_TAXATION">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_110"/>
-  <role:plays rdf:resource="#respondent"/>
-</lega:Legal_Person>
-
-<Judg:Judgement rdf:about="#2006_FCA_301">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
-  <Judg:considers rdf:resource="#Corporations_Act_2001"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24-Feb-06</judgement_date>
-  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
-</Judg:Judgement>
-
-<lega:Legal_Person rdf:about="#MP_Cleary">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_301"/>
-  <role:plays rdf:resource="#plaintiff_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Legal_Services_Branch">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_301"/>
-  <role:plays rdf:resource="#plaintiff_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Michael_K_Bacina">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_301"/>
-  <role:plays rdf:resource="#defendant_solicitor"/>
-</lega:Legal_Person>
-
-<lega2:Legal_Role rdf:about="#defendant_solicitor">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</lega2:Legal_Role>
-
-<lega:Legal_Person rdf:about="#DEPUTY_COMMISSIONER_OF_TAXATION">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_301"/>
-  <role:plays rdf:resource="#plaintiff"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#BRITISH_FINANCE_PTY_LTD">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_301"/>
-  <role:plays rdf:resource="#defendant"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#MICHAEL_SAADIE">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_301"/>
-  <role:plays rdf:resource="#defendant"/>
-</lega:Legal_Person>
-
-<Judg:Judgement rdf:about="#2006_FCA_1449">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
-  <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31-Oct-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31-Oct-06</judgement_date>
-  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
-</Judg:Judgement>
-
-<lega:Legal_Person rdf:about="#Mr_D_Knaggs">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1449"/>
-  <role:plays rdf:resource="#applicant_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#SZHUC">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_1449"/>
-  <role:plays rdf:resource="#applicant"/>
-</lega:Legal_Person>
-
-<Judg:Judgement rdf:about="#2006_FCA_132">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
-  <Judg:considers rdf:resource="#Workplace_Relations_Act_1996"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-Feb-06</judgement_date>
-  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perth</jurisdiction_city>
-</Judg:Judgement>
-
-<proc:Physical_Object rdf:about="#Western_Australia__District_Registry">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <stores rdf:resource="#2006_FCA_132"/>
-</proc:Physical_Object>
-
-<lega:Legal_Person rdf:about="#Mr_A_Gill">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_132"/>
-  <role:plays rdf:resource="#applicant_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Chapmans">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_132"/>
-  <role:plays rdf:resource="#applicant_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#Mr_R_Andretich">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_132"/>
-  <role:plays rdf:resource="#respondent_counsel"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#State_Solicitor_for_Western_Australia">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_132"/>
-  <role:plays rdf:resource="#respondent_solicitor"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#CAROL_ANN_MACKAY">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_132"/>
-  <role:plays rdf:resource="#applicant"/>
-</lega:Legal_Person>
-
-<lega:Legal_Person rdf:about="#MINISTER_FOR_HEALTH">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_132"/>
-  <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
 

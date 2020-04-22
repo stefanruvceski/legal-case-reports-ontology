@@ -20,6 +20,7 @@ owlready2.JAVA_EXE = 'C:/Program Files/Java/jdk-14.0.1/bin/java.exe'
 class LCRDataWrapper:    
     def __init__(self, data_row):
         self.case_id = data_row['case_id']
+        self.case_name = data_row['case_name']
         self.judgement_date = data_row['judgement_date']
         self.hearing_date = data_row['hearing_date']
         self.judgement_registry = data_row['judgement_registry']
@@ -67,6 +68,18 @@ class LCRDataWrapper:
             self.legal_rules = data_row['legal_rules'].split(';')
         else:
             self.legal_rules = []
+        
+        # druge presude koje referencira trenutna presuda!!!
+        if(data_row['referenced_cases'] != ''):
+            self.referenced_cases = data_row['referenced_cases'].split(';')
+        else:
+            self.referenced_cases = []
+        
+        # imena presuda koje referencira trenutna presuda
+        if(data_row['ref_names'] != ''):
+            self.ref_names = data_row['ref_names'].split(';')
+        else:
+            self.ref_names = []
 
 # Funkcija ucitava csv fajl i kreira listu wrapper objekata od kojih ce se populisati ontologija
 def load_data(path='lcr_data.csv'):
@@ -108,6 +121,7 @@ def populate_ontology(legal_ontology, data_instances):
         # Judgement individual
         judgement = instance.case_id.replace(' ', '_')
         judgement = judo.Judgement(judgement, namespace=legal_ontology)
+        judgement.judgement_name.append(instance.case_name)
         judgement.jurisdiction_city.append(instance.jurisdiction_court_city)
         judgement.judgement_date.append(instance.judgement_date)
         judgement.hearing_date.append(instance.hearing_date)
@@ -183,6 +197,15 @@ def populate_ontology(legal_ontology, data_instances):
             rule = rule.replace(' ', '_')
             legal_rule = judo.Legal_Rule(rule, namespace=legal_ontology)
             judgement.considers.append(legal_rule)
+            
+        # Referencirane presude
+        for ref_case, ref_name in zip(instance.referenced_cases, instance.ref_names):
+            # pravljenje individuala presude koja se referencira (VIDI STA SE DESAVA AKO TAKAV INDIVIDUAL VEC POSTOJI)
+            ref_case = ref_case.replace(' ', '_')
+            ref_judgement = judo.Judgement(ref_case, namespace=legal_ontology)
+            ref_judgement.judgement_name.append(ref_name)
+            # aktuelna presuda -> considers -> referencirana presuda
+            judgement.considers.append(ref_judgement)
            
     # HermiT reasoner -> ako bude pucalo, skines HermiT sa zvanicnog sajta, raspakujes i zamenis to sa onim sto ti je instalirano preko owlready2
     # znaci bice negde ili AppData/Python/... ili u okruzenju koje koristis u anakondi

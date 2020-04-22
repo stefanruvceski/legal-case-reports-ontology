@@ -97,6 +97,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto#judgement_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto#judgement_name">
+        <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto#jurisdiction_city -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto#jurisdiction_city">
