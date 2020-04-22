@@ -57,7 +57,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Jurisdiction>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_35">
+<Judg:Judgement rdf:about="#2006_FCA_35">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
@@ -68,38 +68,38 @@
 
 <proc:Physical_Object rdf:about="#New_South_Wales_District_Registry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <stores rdf:resource="#[2006]_FCA_35"/>
-  <stores rdf:resource="#[2006]_FCA_47"/>
-  <stores rdf:resource="#[2006]_FCA_88"/>
-  <stores rdf:resource="#[2006]_FCA_86"/>
-  <stores rdf:resource="#[2006]_FCA_46"/>
-  <stores rdf:resource="#[2006]_FCA_1842"/>
-  <stores rdf:resource="#[2006]_FCA_1549"/>
-  <stores rdf:resource="#[2006]_FCA_97"/>
-  <stores rdf:resource="#[2006]_FCA_87"/>
-  <stores rdf:resource="#[2006]_FCA_1354"/>
-  <stores rdf:resource="#[2006]_FCA_54"/>
-  <stores rdf:resource="#[2006]_FCA_1495"/>
-  <stores rdf:resource="#[2006]_FCA_912"/>
-  <stores rdf:resource="#[2006]_FCA_701"/>
-  <stores rdf:resource="#[2006]_FCA_240"/>
-  <stores rdf:resource="#[2006]_FCA_1616"/>
-  <stores rdf:resource="#[2006]_FCA_1451"/>
-  <stores rdf:resource="#[2006]_FCA_301"/>
-  <stores rdf:resource="#[2006]_FCA_1449"/>
+  <stores rdf:resource="#2006_FCA_35"/>
+  <stores rdf:resource="#2006_FCA_47"/>
+  <stores rdf:resource="#2006_FCA_88"/>
+  <stores rdf:resource="#2006_FCA_86"/>
+  <stores rdf:resource="#2006_FCA_46"/>
+  <stores rdf:resource="#2006_FCA_1842"/>
+  <stores rdf:resource="#2006_FCA_1549"/>
+  <stores rdf:resource="#2006_FCA_97"/>
+  <stores rdf:resource="#2006_FCA_87"/>
+  <stores rdf:resource="#2006_FCA_1354"/>
+  <stores rdf:resource="#2006_FCA_54"/>
+  <stores rdf:resource="#2006_FCA_1495"/>
+  <stores rdf:resource="#2006_FCA_912"/>
+  <stores rdf:resource="#2006_FCA_701"/>
+  <stores rdf:resource="#2006_FCA_240"/>
+  <stores rdf:resource="#2006_FCA_1616"/>
+  <stores rdf:resource="#2006_FCA_1451"/>
+  <stores rdf:resource="#2006_FCA_301"/>
+  <stores rdf:resource="#2006_FCA_1449"/>
 </proc:Physical_Object>
 
 <lega:Legal_Person rdf:about="#Moore_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_35"/>
-  <participant rdf:resource="#[2006]_FCA_47"/>
-  <participant rdf:resource="#[2006]_FCA_88"/>
-  <participant rdf:resource="#[2006]_FCA_86"/>
-  <participant rdf:resource="#[2006]_FCA_46"/>
-  <participant rdf:resource="#[2006]_FCA_97"/>
-  <participant rdf:resource="#[2006]_FCA_87"/>
-  <participant rdf:resource="#[2006]_FCA_54"/>
-  <participant rdf:resource="#[2006]_FCA_1616"/>
+  <participant rdf:resource="#2006_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_47"/>
+  <participant rdf:resource="#2006_FCA_88"/>
+  <participant rdf:resource="#2006_FCA_86"/>
+  <participant rdf:resource="#2006_FCA_46"/>
+  <participant rdf:resource="#2006_FCA_97"/>
+  <participant rdf:resource="#2006_FCA_87"/>
+  <participant rdf:resource="#2006_FCA_54"/>
+  <participant rdf:resource="#2006_FCA_1616"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
@@ -109,7 +109,7 @@
 
 <lega:Legal_Person rdf:about="#Michael_Jones">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#appellant_solicitor"/>
 </lega:Legal_Person>
 
@@ -119,7 +119,7 @@
 
 <lega:Legal_Person rdf:about="#S_LLoyd">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
@@ -129,13 +129,13 @@
 
 <lega:Legal_Person rdf:about="#Clayton_Utz">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_35"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
-  <participant rdf:resource="#[2006]_FCA_88"/>
-  <participant rdf:resource="#[2006]_FCA_86"/>
-  <participant rdf:resource="#[2006]_FCA_46"/>
-  <participant rdf:resource="#[2006]_FCA_87"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_88"/>
+  <participant rdf:resource="#2006_FCA_86"/>
+  <participant rdf:resource="#2006_FCA_46"/>
+  <participant rdf:resource="#2006_FCA_87"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
@@ -145,7 +145,7 @@
 
 <lega:Legal_Person rdf:about="#SZGBY">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
@@ -155,22 +155,22 @@
 
 <lega:Legal_Person rdf:about="#MINISTER_FOR_IMMIGRATION_AND_MULTICULTURAL_AND_INDIGENOUS_AFFAIRS">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_35"/>
-  <participant rdf:resource="#[2006]_FCA_23"/>
-  <participant rdf:resource="#[2006]_FCA_39"/>
-  <participant rdf:resource="#[2006]_FCA_40"/>
-  <participant rdf:resource="#[2006]_FCA_88"/>
-  <participant rdf:resource="#[2006]_FCA_86"/>
-  <participant rdf:resource="#[2006]_FCA_46"/>
-  <participant rdf:resource="#[2006]_FCA_1549"/>
-  <participant rdf:resource="#[2006]_FCA_97"/>
-  <participant rdf:resource="#[2006]_FCA_87"/>
-  <participant rdf:resource="#[2006]_FCA_54"/>
-  <participant rdf:resource="#[2006]_FCA_1495"/>
-  <participant rdf:resource="#[2006]_FCA_701"/>
-  <participant rdf:resource="#[2006]_FCA_240"/>
-  <participant rdf:resource="#[2006]_FCA_1616"/>
-  <participant rdf:resource="#[2006]_FCA_1449"/>
+  <participant rdf:resource="#2006_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_23"/>
+  <participant rdf:resource="#2006_FCA_39"/>
+  <participant rdf:resource="#2006_FCA_40"/>
+  <participant rdf:resource="#2006_FCA_88"/>
+  <participant rdf:resource="#2006_FCA_86"/>
+  <participant rdf:resource="#2006_FCA_46"/>
+  <participant rdf:resource="#2006_FCA_1549"/>
+  <participant rdf:resource="#2006_FCA_97"/>
+  <participant rdf:resource="#2006_FCA_87"/>
+  <participant rdf:resource="#2006_FCA_54"/>
+  <participant rdf:resource="#2006_FCA_1495"/>
+  <participant rdf:resource="#2006_FCA_701"/>
+  <participant rdf:resource="#2006_FCA_240"/>
+  <participant rdf:resource="#2006_FCA_1616"/>
+  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
@@ -180,21 +180,21 @@
 
 <lega:Legal_Person rdf:about="#REFUGEE_REVIEW_TRIBUNAL">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_35"/>
-  <participant rdf:resource="#[2006]_FCA_23"/>
-  <participant rdf:resource="#[2006]_FCA_39"/>
-  <participant rdf:resource="#[2006]_FCA_40"/>
-  <participant rdf:resource="#[2006]_FCA_88"/>
-  <participant rdf:resource="#[2006]_FCA_86"/>
-  <participant rdf:resource="#[2006]_FCA_46"/>
-  <participant rdf:resource="#[2006]_FCA_1549"/>
-  <participant rdf:resource="#[2006]_FCA_97"/>
-  <participant rdf:resource="#[2006]_FCA_87"/>
-  <participant rdf:resource="#[2006]_FCA_54"/>
-  <participant rdf:resource="#[2006]_FCA_1495"/>
-  <participant rdf:resource="#[2006]_FCA_701"/>
-  <participant rdf:resource="#[2006]_FCA_1616"/>
-  <participant rdf:resource="#[2006]_FCA_1449"/>
+  <participant rdf:resource="#2006_FCA_35"/>
+  <participant rdf:resource="#2006_FCA_23"/>
+  <participant rdf:resource="#2006_FCA_39"/>
+  <participant rdf:resource="#2006_FCA_40"/>
+  <participant rdf:resource="#2006_FCA_88"/>
+  <participant rdf:resource="#2006_FCA_86"/>
+  <participant rdf:resource="#2006_FCA_46"/>
+  <participant rdf:resource="#2006_FCA_1549"/>
+  <participant rdf:resource="#2006_FCA_97"/>
+  <participant rdf:resource="#2006_FCA_87"/>
+  <participant rdf:resource="#2006_FCA_54"/>
+  <participant rdf:resource="#2006_FCA_1495"/>
+  <participant rdf:resource="#2006_FCA_701"/>
+  <participant rdf:resource="#2006_FCA_1616"/>
+  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
@@ -202,7 +202,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_7">
+<Judg:Judgement rdf:about="#2006_FCA_7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Workplace_Relations_Act_1996"/>
@@ -214,24 +214,24 @@
 
 <proc:Physical_Object rdf:about="#Victoria_District_Registry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <stores rdf:resource="#[2006]_FCA_7"/>
-  <stores rdf:resource="#[2006]_FCA_23"/>
-  <stores rdf:resource="#[2006]_FCA_37"/>
-  <stores rdf:resource="#[2006]_FCA_38"/>
-  <stores rdf:resource="#[2006]_FCA_39"/>
-  <stores rdf:resource="#[2006]_FCA_40"/>
+  <stores rdf:resource="#2006_FCA_7"/>
+  <stores rdf:resource="#2006_FCA_23"/>
+  <stores rdf:resource="#2006_FCA_37"/>
+  <stores rdf:resource="#2006_FCA_38"/>
+  <stores rdf:resource="#2006_FCA_39"/>
+  <stores rdf:resource="#2006_FCA_40"/>
 </proc:Physical_Object>
 
 <lega:Legal_Person rdf:about="#Marshall_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
-  <participant rdf:resource="#[2006]_FCA_132"/>
+  <participant rdf:resource="#2006_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_132"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Dr_C_Jessup">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_7"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
@@ -241,13 +241,13 @@
 
 <lega:Legal_Person rdf:about="#Mr_S_Moore">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_7"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#CEPU">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_7"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
 </lega:Legal_Person>
 
@@ -257,19 +257,19 @@
 
 <lega:Legal_Person rdf:about="#Mr_F_Parry_SC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_7"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_C_O'Grady">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_7"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#COMMUNICATIONS,_ELECTRICAL,_ELECTRONIC,_ENERGY,_INFORMATION,_POSTAL,_PLUMBING_AND_ALLIED_SERVICES_UNION_OF_AUSTRALIA">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_7"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
@@ -279,7 +279,7 @@
 
 <lega:Legal_Person rdf:about="#ACI_OPERATIONS_PTY_LTD">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_7"/>
+  <participant rdf:resource="#2006_FCA_7"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
@@ -291,7 +291,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_16">
+<Judg:Judgement rdf:about="#2006_FCA_16">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
@@ -302,72 +302,72 @@
 
 <proc:Physical_Object rdf:about="#South_Australia_District_Registry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <stores rdf:resource="#[2006]_FCA_16"/>
+  <stores rdf:resource="#2006_FCA_16"/>
 </proc:Physical_Object>
 
 <lega:Legal_Person rdf:about="#Mansfield_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_16"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#C_O'Conor">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_16"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Hamdan_Lawyers">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_16"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#S_Maharaj">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_16"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#R_Prince">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_16"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Australian_Government_Solicitor">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
-  <participant rdf:resource="#[2006]_FCA_23"/>
-  <participant rdf:resource="#[2006]_FCA_39"/>
-  <participant rdf:resource="#[2006]_FCA_40"/>
-  <participant rdf:resource="#[2006]_FCA_47"/>
-  <participant rdf:resource="#[2006]_FCA_97"/>
-  <participant rdf:resource="#[2006]_FCA_240"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_23"/>
+  <participant rdf:resource="#2006_FCA_39"/>
+  <participant rdf:resource="#2006_FCA_40"/>
+  <participant rdf:resource="#2006_FCA_47"/>
+  <participant rdf:resource="#2006_FCA_97"/>
+  <participant rdf:resource="#2006_FCA_240"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#ALI_BEYAZKILINC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_16"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MANAGER_BAXTER_IMMIGRATION_RECEPTION_&amp;_PROCESSING_CENTRE">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_16"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#COMMONWEALTH_OF_AUSTRALIA">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_16"/>
-  <participant rdf:resource="#[2006]_FCA_97"/>
+  <participant rdf:resource="#2006_FCA_16"/>
+  <participant rdf:resource="#2006_FCA_97"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_23">
+<Judg:Judgement rdf:about="#2006_FCA_23">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -378,19 +378,19 @@
 
 <lega:Legal_Person rdf:about="#Young_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_23"/>
+  <participant rdf:resource="#2006_FCA_23"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_Warren_Mosley">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_23"/>
+  <participant rdf:resource="#2006_FCA_23"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MZWQW">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_23"/>
+  <participant rdf:resource="#2006_FCA_23"/>
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
@@ -398,7 +398,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_37">
+<Judg:Judgement rdf:about="#2006_FCA_37">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Bankruptcy_Act_1966"/>
@@ -409,28 +409,28 @@
 
 <lega:Legal_Person rdf:about="#Merkel_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_37"/>
-  <participant rdf:resource="#[2006]_FCA_38"/>
-  <participant rdf:resource="#[2006]_FCA_39"/>
-  <participant rdf:resource="#[2006]_FCA_40"/>
+  <participant rdf:resource="#2006_FCA_37"/>
+  <participant rdf:resource="#2006_FCA_38"/>
+  <participant rdf:resource="#2006_FCA_39"/>
+  <participant rdf:resource="#2006_FCA_40"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Piper_Alderman">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_37"/>
+  <participant rdf:resource="#2006_FCA_37"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#ANDREW_VASILIOU">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_37"/>
+  <participant rdf:resource="#2006_FCA_37"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#BRENDAN_JOHN_MARCHESI">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_37"/>
+  <participant rdf:resource="#2006_FCA_37"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
@@ -438,7 +438,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_38">
+<Judg:Judgement rdf:about="#2006_FCA_38">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -449,47 +449,47 @@
 
 <lega:Legal_Person rdf:about="#R_Cobden">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_38"/>
+  <participant rdf:resource="#2006_FCA_38"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#C_Bova">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_38"/>
+  <participant rdf:resource="#2006_FCA_38"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Shelston_IP_Lawyers">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_38"/>
+  <participant rdf:resource="#2006_FCA_38"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#SAVVAS_CHRISTODOULOU">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_38"/>
+  <participant rdf:resource="#2006_FCA_38"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#DISNEY_ENTERPRISES_INC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_38"/>
+  <participant rdf:resource="#2006_FCA_38"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#BUENA_VISTA_AUSTRALIA">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_38"/>
+  <participant rdf:resource="#2006_FCA_38"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#BMG_AUSTRALIA">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_38"/>
+  <participant rdf:resource="#2006_FCA_38"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_39">
+<Judg:Judgement rdf:about="#2006_FCA_39">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Convention_Relating_to_the_Status_of_Refugees_1951"/>
@@ -501,7 +501,7 @@
 
 <lega:Legal_Person rdf:about="#R_Niall">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_39"/>
+  <participant rdf:resource="#2006_FCA_39"/>
   <role:plays rdf:resource="#appellant_counsel"/>
 </lega:Legal_Person>
 
@@ -511,20 +511,20 @@
 
 <lega:Legal_Person rdf:about="#C_Symons">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_39"/>
+  <participant rdf:resource="#2006_FCA_39"/>
   <role:plays rdf:resource="#appellant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#H_Riley">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_39"/>
-  <participant rdf:resource="#[2006]_FCA_40"/>
+  <participant rdf:resource="#2006_FCA_39"/>
+  <participant rdf:resource="#2006_FCA_40"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#VWBU">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_39"/>
+  <participant rdf:resource="#2006_FCA_39"/>
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
@@ -536,7 +536,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_40">
+<Judg:Judgement rdf:about="#2006_FCA_40">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -547,7 +547,7 @@
 
 <lega:Legal_Person rdf:about="#A227/2002">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_40"/>
+  <participant rdf:resource="#2006_FCA_40"/>
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
@@ -563,14 +563,14 @@
 <proc:Physical_Object rdf:about="#Queensland_District_Registry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <stores rdf:resource="#[2007]_FCA_1800"/>
-  <stores rdf:resource="#[2006]_FCA_637"/>
-  <stores rdf:resource="#[2006]_FCA_110"/>
+  <stores rdf:resource="#2006_FCA_637"/>
+  <stores rdf:resource="#2006_FCA_110"/>
 </proc:Physical_Object>
 
 <lega:Legal_Person rdf:about="#Greenwood_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#[2007]_FCA_1800"/>
-  <participant rdf:resource="#[2006]_FCA_637"/>
+  <participant rdf:resource="#2006_FCA_637"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
@@ -583,7 +583,7 @@
 <lega:Legal_Person rdf:about="#Phillips_Fox">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#[2007]_FCA_1800"/>
-  <participant rdf:resource="#[2006]_FCA_54"/>
+  <participant rdf:resource="#2006_FCA_54"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
@@ -597,8 +597,8 @@
 <lega:Legal_Person rdf:about="#Mallesons_Stephen_Jaques">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#[2007]_FCA_1800"/>
-  <participant rdf:resource="#[2006]_FCA_1842"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1842"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
 </lega:Legal_Person>
@@ -615,7 +615,7 @@
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_47">
+<Judg:Judgement rdf:about="#2006_FCA_47">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -626,17 +626,17 @@
 
 <lega:Legal_Person rdf:about="#SHER_AFZAL_KHAN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_47"/>
+  <participant rdf:resource="#2006_FCA_47"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MIGRATION_AGENT_REGISTRATION_AUTHORITY">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_47"/>
+  <participant rdf:resource="#2006_FCA_47"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_88">
+<Judg:Judgement rdf:about="#2006_FCA_88">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -647,19 +647,19 @@
 
 <lega:Legal_Person rdf:about="#A_Chand">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_88"/>
-  <participant rdf:resource="#[2006]_FCA_86"/>
-  <participant rdf:resource="#[2006]_FCA_87"/>
+  <participant rdf:resource="#2006_FCA_88"/>
+  <participant rdf:resource="#2006_FCA_86"/>
+  <participant rdf:resource="#2006_FCA_87"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#CZAJ">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_88"/>
+  <participant rdf:resource="#2006_FCA_88"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_86">
+<Judg:Judgement rdf:about="#2006_FCA_86">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -670,11 +670,11 @@
 
 <lega:Legal_Person rdf:about="#CZAH">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_86"/>
+  <participant rdf:resource="#2006_FCA_86"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_46">
+<Judg:Judgement rdf:about="#2006_FCA_46">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -685,11 +685,11 @@
 
 <lega:Legal_Person rdf:about="#SZDZQ">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_46"/>
+  <participant rdf:resource="#2006_FCA_46"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_1842">
+<Judg:Judgement rdf:about="#2006_FCA_1842">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Copyright_Act_1968"/>
@@ -700,43 +700,43 @@
 
 <lega:Legal_Person rdf:about="#Tamberlin_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1842"/>
+  <participant rdf:resource="#2006_FCA_1842"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#P_W_Flynn">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1842"/>
+  <participant rdf:resource="#2006_FCA_1842"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MICROSOFT_CORPORATION">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1842"/>
+  <participant rdf:resource="#2006_FCA_1842"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MICROSOFT_LICENSING">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1842"/>
+  <participant rdf:resource="#2006_FCA_1842"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MICROSOFT_PTY_LTD">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1842"/>
+  <participant rdf:resource="#2006_FCA_1842"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#RP_DISTRIBUTION_PTY_LTD">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1842"/>
+  <participant rdf:resource="#2006_FCA_1842"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#REUBEN_MARK_VELLA">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1842"/>
+  <participant rdf:resource="#2006_FCA_1842"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
@@ -744,7 +744,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_1549">
+<Judg:Judgement rdf:about="#2006_FCA_1549">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_of_Australia_Act_1976"/>
@@ -755,19 +755,19 @@
 
 <lega:Legal_Person rdf:about="#Spender_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1549"/>
+  <participant rdf:resource="#2006_FCA_1549"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Ms_Bernadette_Rayment">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1549"/>
+  <participant rdf:resource="#2006_FCA_1549"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#SZIAM">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1549"/>
+  <participant rdf:resource="#2006_FCA_1549"/>
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
@@ -775,7 +775,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_97">
+<Judg:Judgement rdf:about="#2006_FCA_97">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -786,11 +786,11 @@
 
 <lega:Legal_Person rdf:about="#S255/2003">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_97"/>
+  <participant rdf:resource="#2006_FCA_97"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_87">
+<Judg:Judgement rdf:about="#2006_FCA_87">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
@@ -801,11 +801,11 @@
 
 <lega:Legal_Person rdf:about="#CZAI">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_87"/>
+  <participant rdf:resource="#2006_FCA_87"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_1354">
+<Judg:Judgement rdf:about="#2006_FCA_1354">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Corporations_Act_2001"/>
@@ -816,19 +816,19 @@
 
 <lega:Legal_Person rdf:about="#Gyles_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1354"/>
-  <participant rdf:resource="#[2006]_FCA_1495"/>
-  <participant rdf:resource="#[2006]_FCA_912"/>
-  <participant rdf:resource="#[2006]_FCA_701"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
-  <participant rdf:resource="#[2006]_FCA_301"/>
-  <participant rdf:resource="#[2006]_FCA_1449"/>
+  <participant rdf:resource="#2006_FCA_1354"/>
+  <participant rdf:resource="#2006_FCA_1495"/>
+  <participant rdf:resource="#2006_FCA_912"/>
+  <participant rdf:resource="#2006_FCA_701"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_301"/>
+  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_GP_McNally">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1354"/>
+  <participant rdf:resource="#2006_FCA_1354"/>
   <role:plays rdf:resource="#plaintiff_counsel"/>
 </lega:Legal_Person>
 
@@ -838,7 +838,7 @@
 
 <lega:Legal_Person rdf:about="#Australian_Securities_and_Investments_Commision">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1354"/>
+  <participant rdf:resource="#2006_FCA_1354"/>
   <role:plays rdf:resource="#plaintiff_solicitor"/>
 </lega:Legal_Person>
 
@@ -848,8 +848,8 @@
 
 <lega:Legal_Person rdf:about="#AUSTRALIAN_SECURITIES_AND_INVESTMENTS_COMMISION">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1354"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1354"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#plaintiff"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
@@ -860,7 +860,7 @@
 
 <lega:Legal_Person rdf:about="#JOSEPH_SLEIMAN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1354"/>
+  <participant rdf:resource="#2006_FCA_1354"/>
   <role:plays rdf:resource="#defendant"/>
 </lega:Legal_Person>
 
@@ -872,7 +872,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </Judg:Legal_Rule>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_54">
+<Judg:Judgement rdf:about="#2006_FCA_54">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -883,17 +883,17 @@
 
 <lega:Legal_Person rdf:about="#S_A_Mason">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_54"/>
+  <participant rdf:resource="#2006_FCA_54"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#SZGWS">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_54"/>
+  <participant rdf:resource="#2006_FCA_54"/>
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_1495">
+<Judg:Judgement rdf:about="#2006_FCA_1495">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -904,17 +904,17 @@
 
 <lega:Legal_Person rdf:about="#Mr_J_Wright">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1495"/>
+  <participant rdf:resource="#2006_FCA_1495"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#S117/2003">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1495"/>
+  <participant rdf:resource="#2006_FCA_1495"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_912">
+<Judg:Judgement rdf:about="#2006_FCA_912">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Corporations_Act_2001"/>
@@ -925,31 +925,31 @@
 
 <lega:Legal_Person rdf:about="#Mr_TF_Bathurst">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_912"/>
+  <participant rdf:resource="#2006_FCA_912"/>
   <role:plays rdf:resource="#plaintiff_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_S_Nixon">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_912"/>
+  <participant rdf:resource="#2006_FCA_912"/>
   <role:plays rdf:resource="#plaintiff_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Blake_Dawson_Waldron">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_912"/>
-  <participant rdf:resource="#[2006]_FCA_1449"/>
+  <participant rdf:resource="#2006_FCA_912"/>
+  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#plaintiff_solicitor"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#SFE_CORPORATION_LIMITED">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_912"/>
+  <participant rdf:resource="#2006_FCA_912"/>
   <role:plays rdf:resource="#plaintiff"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_701">
+<Judg:Judgement rdf:about="#2006_FCA_701">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -960,17 +960,17 @@
 
 <lega:Legal_Person rdf:about="#Susan_Goodman">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_701"/>
+  <participant rdf:resource="#2006_FCA_701"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#SZHAL">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_701"/>
+  <participant rdf:resource="#2006_FCA_701"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_240">
+<Judg:Judgement rdf:about="#2006_FCA_240">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -981,17 +981,17 @@
 
 <lega:Legal_Person rdf:about="#Conti_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_240"/>
+  <participant rdf:resource="#2006_FCA_240"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#SZAYH">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_240"/>
+  <participant rdf:resource="#2006_FCA_240"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_1616">
+<Judg:Judgement rdf:about="#2006_FCA_1616">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_of_Australia_Act_1976"/>
@@ -1002,17 +1002,17 @@
 
 <lega:Legal_Person rdf:about="#Sparke_Helmore">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1616"/>
+  <participant rdf:resource="#2006_FCA_1616"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#NBBL">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1616"/>
+  <participant rdf:resource="#2006_FCA_1616"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_1451">
+<Judg:Judgement rdf:about="#2006_FCA_1451">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -1023,77 +1023,77 @@
 
 <lega:Legal_Person rdf:about="#Mr_N_Perram_SC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_B_Dharmananda">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Dr_AG_Bell_SC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_JS_Emmett">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_SA_Goodman">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#legal_person1">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Ms_K_Turner">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Ms_J_Row">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MICHAEL_JOSEPH_PATRICK_RYAN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#ANTONY_WOODINGS">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MATTHEW_GILL">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MACQUARIE_BANK_LIMITED">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1451"/>
+  <participant rdf:resource="#2006_FCA_1451"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_637">
+<Judg:Judgement rdf:about="#2006_FCA_637">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -1104,29 +1104,29 @@
 
 <lega:Legal_Person rdf:about="#Ms_Ece_Mustafa-Ay">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_637"/>
+  <participant rdf:resource="#2006_FCA_637"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_Peter_Watts">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_637"/>
+  <participant rdf:resource="#2006_FCA_637"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#LIFETIME_INVESTMENTS_PTY_LTD">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_637"/>
+  <participant rdf:resource="#2006_FCA_637"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#COMMERCIAL_FINANCIAL_SERVICES_PTY_LTD">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_637"/>
+  <participant rdf:resource="#2006_FCA_637"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_110">
+<Judg:Judgement rdf:about="#2006_FCA_110">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -1137,53 +1137,53 @@
 
 <lega:Legal_Person rdf:about="#Kiefel_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#judge"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_D_G_Russell_QC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_H_Alexander">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Tobin_King_Lateef">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_P_E_Hack_SC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_P_A_Looney">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#BRIAN_JOSEPH_HERAN">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#COMMISSIONER_OF_TAXATION">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_110"/>
+  <participant rdf:resource="#2006_FCA_110"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_301">
+<Judg:Judgement rdf:about="#2006_FCA_301">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Corporations_Act_2001"/>
@@ -1194,19 +1194,19 @@
 
 <lega:Legal_Person rdf:about="#MP_Cleary">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_301"/>
+  <participant rdf:resource="#2006_FCA_301"/>
   <role:plays rdf:resource="#plaintiff_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Legal_Services_Branch">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_301"/>
+  <participant rdf:resource="#2006_FCA_301"/>
   <role:plays rdf:resource="#plaintiff_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Michael_K_Bacina">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_301"/>
+  <participant rdf:resource="#2006_FCA_301"/>
   <role:plays rdf:resource="#defendant_solicitor"/>
 </lega:Legal_Person>
 
@@ -1216,23 +1216,23 @@
 
 <lega:Legal_Person rdf:about="#DEPUTY_COMMISSIONER_OF_TAXATION">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_301"/>
+  <participant rdf:resource="#2006_FCA_301"/>
   <role:plays rdf:resource="#plaintiff"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#BRITISH_FINANCE_PTY_LTD">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_301"/>
+  <participant rdf:resource="#2006_FCA_301"/>
   <role:plays rdf:resource="#defendant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MICHAEL_SAADIE">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_301"/>
+  <participant rdf:resource="#2006_FCA_301"/>
   <role:plays rdf:resource="#defendant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_1449">
+<Judg:Judgement rdf:about="#2006_FCA_1449">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
@@ -1243,17 +1243,17 @@
 
 <lega:Legal_Person rdf:about="#Mr_D_Knaggs">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1449"/>
+  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#SZHUC">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_1449"/>
+  <participant rdf:resource="#2006_FCA_1449"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#[2006]_FCA_132">
+<Judg:Judgement rdf:about="#2006_FCA_132">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Workplace_Relations_Act_1996"/>
@@ -1264,42 +1264,42 @@
 
 <proc:Physical_Object rdf:about="#Western_Australia__District_Registry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <stores rdf:resource="#[2006]_FCA_132"/>
+  <stores rdf:resource="#2006_FCA_132"/>
 </proc:Physical_Object>
 
 <lega:Legal_Person rdf:about="#Mr_A_Gill">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_132"/>
+  <participant rdf:resource="#2006_FCA_132"/>
   <role:plays rdf:resource="#applicant_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Chapmans">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_132"/>
+  <participant rdf:resource="#2006_FCA_132"/>
   <role:plays rdf:resource="#applicant_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#Mr_R_Andretich">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_132"/>
+  <participant rdf:resource="#2006_FCA_132"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#State_Solicitor_for_Western_Australia">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_132"/>
+  <participant rdf:resource="#2006_FCA_132"/>
   <role:plays rdf:resource="#respondent_solicitor"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#CAROL_ANN_MACKAY">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_132"/>
+  <participant rdf:resource="#2006_FCA_132"/>
   <role:plays rdf:resource="#applicant"/>
 </lega:Legal_Person>
 
 <lega:Legal_Person rdf:about="#MINISTER_FOR_HEALTH">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#[2006]_FCA_132"/>
+  <participant rdf:resource="#2006_FCA_132"/>
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
