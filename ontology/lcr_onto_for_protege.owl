@@ -40,12 +40,12 @@
 
 <owl:DatatypeProperty rdf:about="#hearing_date">
   <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#judgement_date">
   <rdfs:domain rdf:resource="http://codexml.cirsfid.unibo.it/ontologies/Judging_Contracts_Core.owl#Judgement"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#judgement_name">
@@ -67,24 +67,14 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
   <Judg:considers rdf:resource="#2003_FCAFC_194"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-Nov-05</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-21</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-06</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZGBY v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
 
-<Judg:Legal_Rule rdf:about="#Migration_Act_1958">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Judg:Legal_Rule>
-
-<Judg:Judgement rdf:about="#2003_FCAFC_194">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAGH v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
-</Judg:Judgement>
-
 <proc:Physical_Object rdf:about="#New_South_Wales_District_Registry">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <stores rdf:resource="#2006_FCA_35"/>
   <stores rdf:resource="#2006_FCA_35"/>
   <stores rdf:resource="#2006_FCA_47"/>
   <stores rdf:resource="#2006_FCA_88"/>
@@ -105,7 +95,6 @@
 <lega:Legal_Person rdf:about="#Moore_J">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_35"/>
-  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_47"/>
   <participant rdf:resource="#2006_FCA_88"/>
   <participant rdf:resource="#2006_FCA_86"/>
@@ -123,7 +112,6 @@
 <lega:Legal_Person rdf:about="#Michael_Jones">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_35"/>
-  <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#appellant_solicitor"/>
 </lega:Legal_Person>
 
@@ -134,7 +122,6 @@
 <lega:Legal_Person rdf:about="#S_LLoyd">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_35"/>
-  <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#respondent_counsel"/>
 </lega:Legal_Person>
 
@@ -144,7 +131,6 @@
 
 <lega:Legal_Person rdf:about="#Clayton_Utz">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_7"/>
   <participant rdf:resource="#2006_FCA_88"/>
@@ -161,7 +147,6 @@
 <lega:Legal_Person rdf:about="#SZGBY">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_35"/>
-  <participant rdf:resource="#2006_FCA_35"/>
   <role:plays rdf:resource="#appellant"/>
 </lega:Legal_Person>
 
@@ -171,7 +156,6 @@
 
 <lega:Legal_Person rdf:about="#MINISTER_FOR_IMMIGRATION_AND_MULTICULTURAL_AND_INDIGENOUS_AFFAIRS">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_23"/>
   <participant rdf:resource="#2006_FCA_39"/>
@@ -196,7 +180,6 @@
 <lega:Legal_Person rdf:about="#REFUGEE_REVIEW_TRIBUNAL">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <participant rdf:resource="#2006_FCA_35"/>
-  <participant rdf:resource="#2006_FCA_35"/>
   <participant rdf:resource="#2006_FCA_23"/>
   <participant rdf:resource="#2006_FCA_39"/>
   <participant rdf:resource="#2006_FCA_40"/>
@@ -212,16 +195,9 @@
   <role:plays rdf:resource="#respondent"/>
 </lega:Legal_Person>
 
-<Judg:Judgement rdf:about="#2006_FCA_35">
+<Judg:Legal_Rule rdf:about="#Migration_Act_1958">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
-  <Judg:considers rdf:resource="#Migration_Act_1958"/>
-  <Judg:considers rdf:resource="#2003_FCAFC_194"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-Nov-05</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Feb-06</judgement_date>
-  <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZGBY v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
-  <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
-</Judg:Judgement>
+</Judg:Legal_Rule>
 
 <Judg:Judgement rdf:about="#2003_FCAFC_194">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -235,8 +211,8 @@
   <Judg:considers rdf:resource="#Crimes_Act_1914"/>
   <Judg:considers rdf:resource="#2005_FCA_1847"/>
   <Judg:considers rdf:resource="#1999_FCA_1714"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9-Dec-05</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16-Jan-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-22</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-07</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Communications, Electrical, Electronic, Energy, Information, Postal, Plumbing and Allied Services Union of Australia v ACI Operations Pty Ltd</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
@@ -336,8 +312,8 @@
   <Judg:considers rdf:resource="#2002_FCAFC_181"/>
   <Judg:considers rdf:resource="#2004_FCA_1332"/>
   <Judg:considers rdf:resource="#2003_FCAFC_131"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18-Jan-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18-Jan-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-23</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-08</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beyazkilinc v Manager Baxter Immigration Reception and Processing Centre</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adelaide</jurisdiction_city>
 </Judg:Judgement>
@@ -434,8 +410,8 @@
   <Judg:considers rdf:resource="#2005_HCA_29"/>
   <Judg:considers rdf:resource="#2004_FCAFC_287"/>
   <Judg:considers rdf:resource="#2004_FCAFC_208"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30-Jan-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31-Jan-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-24</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-09</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MZWQW v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
@@ -502,8 +478,8 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Bankruptcy_Act_1966"/>
   <Judg:considers rdf:resource="#1990_HCA_30"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-25</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-10</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vasiliou v Marchesi</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
@@ -549,8 +525,8 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <Judg:considers rdf:resource="#2005_FCA_1401"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-26</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-11</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christodoulou v Disney Enterprises Inc</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
@@ -609,8 +585,8 @@
   <Judg:considers rdf:resource="#Protocol_Relating_to_the_Status_of_Refugees_1967"/>
   <Judg:considers rdf:resource="#2001_FCA_1833"/>
   <Judg:considers rdf:resource="#2003_HCA_26"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-27</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-12</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VWBU v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
@@ -667,8 +643,8 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <Judg:considers rdf:resource="#1981_HCA_45"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-28</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-13</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Applicants A277/2002 v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melbourne</jurisdiction_city>
 </Judg:Judgement>
@@ -689,8 +665,8 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <Judg:considers rdf:resource="#2007_FCA_1799"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19-Nov-07</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-Nov-07</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-29</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-14</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Di Stefano v Uniline Australia Ltd</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brisbane</jurisdiction_city>
 </Judg:Judgement>
@@ -755,8 +731,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-11-30</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-15</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khan v Migration Agent Registration Authority</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -777,8 +753,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-01</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-16</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CZAJ v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canberra</jurisdiction_city>
 </Judg:Judgement>
@@ -801,8 +777,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-02</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-17</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CZAH v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canberra</jurisdiction_city>
 </Judg:Judgement>
@@ -817,8 +793,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-03</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-18</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZDZQ v Minister for Immigration and Multicultural Affairs and Anor</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -833,8 +809,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Copyright_Act_1968"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-Dec-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-Dec-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-04</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-19</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Corporation v RP Distribution Pty Ltd</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -889,8 +865,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_of_Australia_Act_1976"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8-Nov-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8-Nov-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-05</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-20</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZIAM v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -922,8 +898,8 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <Judg:considers rdf:resource="#2005_FCA_1573"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-06</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-21</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S255 of 2003 v Refugee Review Tribunal</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -943,8 +919,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Migration_Act_1958"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-07</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-22</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CZAI v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canberra</jurisdiction_city>
 </Judg:Judgement>
@@ -959,8 +935,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Corporations_Act_2001"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Oct-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-Oct-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-08</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-23</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australian Securities and Investments Commission v Sleiman</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -1022,8 +998,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7-Feb-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7-Feb-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-09</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-24</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZGWS v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -1045,8 +1021,8 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <Judg:considers rdf:resource="#2006_FMCA_1169"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Nov-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-Nov-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-10</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-25</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Applicant S117 of 2003 v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -1073,8 +1049,8 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Corporations_Act_2001"/>
   <Judg:considers rdf:resource="#2006_FCA_670"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7-Jul-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7-Jul-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-11</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-26</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFE Corporation Limited, in the matter of SFE Corporation Limited</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -1113,8 +1089,8 @@
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
   <Judg:considers rdf:resource="#2006_FMCA_22"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-May-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-May-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-12</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-27</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZHAL v Minister for Immigration and Multicultural Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -1140,8 +1116,8 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <Judg:considered_by rdf:resource="#Federal_Court_of_Australia"/>
   <Judg:considers rdf:resource="#Federal_Court_Rules"/>
-  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9-Mar-06</hearing_date>
-  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16-Mar-06</judgement_date>
+  <hearing_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-12-13</hearing_date>
+  <judgement_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-02-28</judgement_date>
   <judgement_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SZAYH v Minister for Immigration and Multicultural and Indigenous Affairs</judgement_name>
   <jurisdiction_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney</jurisdiction_city>
 </Judg:Judgement>
@@ -1160,3 +1136,4 @@
 
 
 </rdf:RDF>
+

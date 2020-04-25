@@ -12,6 +12,7 @@ from owlready2 import get_ontology
 from owlready2 import sync_reasoner
 import pandas as pd
 import numpy as np
+from datetime import datetime
 
 # za HermiT reasoner
 owlready2.JAVA_EXE = 'C:/Program Files/Java/jdk-14.0.1/bin/java.exe'
@@ -21,8 +22,8 @@ class LCRDataWrapper:
     def __init__(self, data_row):
         self.case_id = data_row['case_id']
         self.case_name = data_row['case_name']
-        self.judgement_date = data_row['judgement_date']
-        self.hearing_date = data_row['hearing_date']
+        self.judgement_date = datetime.strptime(data_row['judgement_date'], '%Y-%m-%d').date()
+        self.hearing_date = datetime.strptime(data_row['hearing_date'], '%Y-%m-%d').date()
         self.judgement_registry = data_row['judgement_registry']
         self.jurisdiction_court = data_row['jurisdiction_court']
         self.jurisdiction_court_city = data_row['jurisdiction_court_city']
