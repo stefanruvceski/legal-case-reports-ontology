@@ -10,7 +10,7 @@ PREFIX lcr: <http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto_protege
 
 -----------------------------------------------------------------
 
-1. svi subjekti koji igraju ulogu judge
+1. svi subjekti koji igraju ulogu judge (ili bilo koju deugu ulogu)
 
     SELECT ?subject 
 	WHERE
@@ -19,16 +19,7 @@ PREFIX lcr: <http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto_protege
 	}
 -----------------------------------------------------------------
 
-2. svi subjekti koji igraju ulogu appellant_counsel
-
-    SELECT ?subject 
-	WHERE
-	{
-		?subject role:plays  lcr:appellant_counsel
-	}
------------------------------------------------------------------
-
-3. svi individuali klase legal_role
+2. svi individuali klase legal_role	(ili bilo koje druge klase)
 
     SELECT DISTINCT  ?individual
 	WHERE
@@ -37,7 +28,7 @@ PREFIX lcr: <http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto_protege
 	}
 -----------------------------------------------------------------
 
-4. svi individuali koji su spomenuli judgement 2006_FCA_88
+3. svi individuali koji su ucestovali u  judgement 2006_FCA_88 (ili u bilo kom drugom)
 
     SELECT ?subject 
 	WHERE
@@ -46,4 +37,90 @@ PREFIX lcr: <http://www.semanticweb.org/marko/ontologies/2020/3/lcr_onto_protege
 	}
 -----------------------------------------------------------------
 
-5.
+4. sve presude u kojima je ucestvovao  MICROSOFT_CORPORATION (ili bilo ko drugi da je ucestovao )
+
+	SELECT ?subject 
+	WHERE
+	{
+		lcr:MICROSOFT_CORPORATION lcr:participant ?subject
+	}
+-----------------------------------------------------------------
+
+5. sve presude u kojima je ucestvovao  MICROSOFT_CORPORATION kao appellant (bilo koji individual i bilo koja rola)
+
+	SELECT ?subject 
+	WHERE
+	{
+		lcr:MICROSOFT_CORPORATION lcr:participant ?subject.
+		lcr:MICROSOFT_CORPORATION role:plays lcr:appellant
+	}
+-----------------------------------------------------------------
+
+6. sudija na judgement-u 2006_FCA_88 (ili bilo koja druga uloga na bilo kom drugom slucaju)
+
+SELECT ?subject 
+	WHERE
+	{
+		?subject lcr:participant lcr:2006_FCA_88.
+		?subject role:plays  lcr:judge
+	}
+-----------------------------------------------------------------
+
+7. svi ucesnici kojima je sudio sudija Merkel_J (ne mora samo sudija moze i appelant, applicant ili bilo sta drugo pa svi njegovi ucsnici)
+
+	SELECT distinct ?subject ?object
+	WHERE
+	{
+		lcr:Merkel_J lcr:participant ?subject.
+		?object lcr:participant ?subject.
+		{?object role:plays lcr:appellant } UNION 
+		{?object role:plays lcr:applicant} UNION  
+		{?object role:plays lcr:plaitiff}  UNION  
+		{?object role:plays lcr:respondent}  UNION  
+		{?object role:plays lcr:defendant}
+		
+	}
+-----------------------------------------------------------------
+
+8. svi advokati na slucajevima na kojima je sudio sudija Merkel_J (ne mora samo sudija moze i appelant, applicant ili bilo sta drugo pa svi advokati)
+
+	SELECT distinct ?object
+	WHERE
+	{
+		lcr:Merkel_J lcr:participant ?subject.
+		?object lcr:participant ?subject.
+		{?object role:plays lcr:appellant_counsel } UNION 
+		{?object role:plays lcr:appellant_solicitor } UNION
+		{?object role:plays lcr:applicant_counsel} UNION  
+		{?object role:plays lcr:applicant_solicitor} UNION  
+		{?object role:plays lcr:plaitiff_counsel}  UNION  
+		{?object role:plays lcr:plaitiff_solicitor}  UNION  
+		{?object role:plays lcr:respondent_councel}  UNION  
+		{?object role:plays lcr:respondent_solicitor} 
+		
+	}
+-----------------------------------------------------------------
+
+9. sve presude koje referencira slucaj koji je referencirao Federal_Court_Rules
+
+	SELECT DISTINCT ?object
+	WHERE
+	{
+		?subject jcc:considers lcr:Federal_Court_Rules.
+		?subject jcc:considers ?object
+	FILTER (?object  != lcr:Federal_Court_Rules)
+	}
+-----------------------------------------------------------------
+
+10. sve zakoni koje referencira slucaj koji je referencirao Federal_Court_Rules
+
+	SELECT DISTINCT ?object
+	WHERE
+	{
+		?subject jcc:considers lcr:Federal_Court_Rules.
+		?subject jcc:considers ?object.
+		?object   rdf:type jcc:Legal_Rule
+	FILTER (?object  != lcr:Federal_Court_Rules)
+	}
+-----------------------------------------------------------------
+
